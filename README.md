@@ -1,2 +1,3 @@
 Abstract / Problem Statement:
+
 In the traditional method of irrigation, scheduling and manual monitoring are used frequently, which leads to over-irrigation and wastage of water. In larger agricultural fields, soil moisture content cannot be monitored constantly, whereas traditional communication technologies like Wi-Fi cannot offer good coverage over longer distances. Thus, there is a need for an efficient, economic, and reliable irrigation system which can monitor soil-moisture content remotely, transfer the information over long distances, and perform automatic irrigation depending upon the moisture content of the soil. 
