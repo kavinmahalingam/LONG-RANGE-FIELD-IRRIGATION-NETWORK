@@ -31,6 +31,7 @@ B. Scope and Contributions
 II. Technical Background and Related Work
 
 Sensor-based irrigation systems generally combine a sensor, embedded controller, wireless link, and actuator. For low-data-rate telemetry, dependable delivery and safe behavior when packets are missing are more important than throughput. LoRa uses chirp spread-spectrum modulation and permits trade-offs among data rate, robustness, and airtime through spreading factor, bandwidth, and coding rate. A larger spreading factor can improve link robustness but increases airtime.
+This project uses point-to-point LoRa radio packets, not LoRaWAN. LoRaWAN additionally requires a protocol stack and network infrastructure. The distinction matters because a pair of SX1278 radios configured with a LoRa library does not, by itself, form a LoRaWAN network.
 
 
 
