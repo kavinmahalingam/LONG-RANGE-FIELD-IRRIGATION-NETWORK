@@ -11,3 +11,17 @@ Irrigation decisions are often made from fixed schedules or visual inspection. T
 Wireless sensor networks can monitor remote plots without long sensor cables. Wi-Fi is useful at a gateway with internet access, but it may not cover a distant field node. LoRa modulation supports low-data-rate, long-range telemetry and is appropriate for small packets such as a moisture estimate. Actual range depends on antenna design, local regulations, terrain, vegetation, interference, radio settings, and line of sight; it must be measured rather than assumed.
 
 The proposed prototype uses two ESP32 boards. ESP32-1 reads a capacitive soil-moisture sensor and transmits a numeric estimate through an SX1278 RA-02 module. ESP32-2 receives packets, decides whether the pump should run, controls a relay, and communicates with Blynk over Wi-Fi. The pump is powered by a separate regulated 6 V supply rather than an ESP32 GPIO.
+
+A. Objectives
+
+• Read and calibrate soil-moisture sensor output.
+
+• Transmit field readings to a gateway using point-to-point LoRa.
+
+• Implement automatic irrigation using two thresholds to reduce relay chatter.
+
+• Provide manual control, mode selection, moisture display, pump status, and RSSI through Blynk.
+
+• Use a separate pump supply and correctly rated relay contacts.
+
+• Define reproducible tests without inventing results.
