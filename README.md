@@ -25,3 +25,9 @@ A. Objectives
 • Use a separate pump supply and correctly rated relay contacts.
 
 • Define reproducible tests without inventing results.
+
+B. Scope and Contributions
+
+The contribution is a modular integration of sensing, LoRa telemetry, local actuation, and cloud monitoring. The field node does not require Wi-Fi. The gateway can make local control decisions from received data. The current demonstration packet is a decimal moisture value; it does not include encryption, authentication, sequence counters, flow feedback, or industrial safety certification. These limitations are stated explicitly.
+
+
