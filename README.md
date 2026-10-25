@@ -28,6 +28,12 @@ A. Objectives
 
 B. Scope and Contributions
 
+II. Technical Background and Related Work
+
+Sensor-based irrigation systems generally combine a sensor, embedded controller, wireless link, and actuator. For low-data-rate telemetry, dependable delivery and safe behavior when packets are missing are more important than throughput. LoRa uses chirp spread-spectrum modulation and permits trade-offs among data rate, robustness, and airtime through spreading factor, bandwidth, and coding rate. A larger spreading factor can improve link robustness but increases airtime.
+
+
+
 The contribution is a modular integration of sensing, LoRa telemetry, local actuation, and cloud monitoring. The field node does not require Wi-Fi. The gateway can make local control decisions from received data. The current demonstration packet is a decimal moisture value; it does not include encryption, authentication, sequence counters, flow feedback, or industrial safety certification. These limitations are stated explicitly.
 
 
