@@ -1,13 +1,5 @@
-Abstract / Problem Statement:
+Abstract
 
-In the traditional method of irrigation, scheduling and manual monitoring are used frequently, which leads to over-irrigation and wastage of water. In larger agricultural fields, soil moisture content cannot be monitored constantly, whereas traditional communication technologies like Wi-Fi cannot offer good coverage over longer distances. Thus, there is a need for an efficient, economic, and reliable irrigation system which can monitor soil-moisture content remotely, transfer the information over long distances, and perform automatic irrigation depending upon the moisture content of the soil. 
+Water management is an important challenge in field irrigation, where fixed watering schedules can waste water or leave crops under-irrigated as soil conditions change. This report presents the design of a prototype Long-Range Field Irrigation Network combining an ESP32 field node, capacitive soil-moisture sensor, SX1278-based LoRa radio link, ESP32 gateway, relay-switched 6 V DC mini pump, and Blynk IoT dashboard. The field node periodically samples the sensor and transmits a moisture estimate over a sub-GHz LoRa link. The gateway validates received packets, applies threshold-based automatic control with hysteresis, switches the pump through a relay interface, and publishes measurements and status to Blynk over Wi-Fi. The architecture separates local sensing and radio communication from cloud connectivity and actuation, allowing the field node to operate without a direct Wi-Fi connection. This paper documents the architecture, interfaces, calibration equations, control logic, test methodology, performance metrics, safety considerations, and limitations. No measured radio range, water-saving percentage, response time, or accuracy is claimed because controlled experimental measurements have not been supplied. A repeatable evaluation plan and blank result tables are included.
 
-Aim(s) / Objectives:
-1. Designing and implementing a low-cost prototype for field irrigation that will measure soil 
-moisture level using a capacitive sensor.
-2. Establishment of long-range wireless connectivity between field ESP32 and gateway ESP32 
-using RA-02 SX1278 LoRa modules.
-3. Implementation of automated irrigation through soil moisture level control and a relay-actuated 6 
-V DC pump.
-4. Mobile monitoring and manual control capability through Blynk Cloud-enabled ESP32 Wi-Fi 
-gateways.
+Keywords—smart irrigation, ESP32, LoRa, SX1278, soil-moisture sensing, IoT, Blynk, relay control.
