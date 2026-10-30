@@ -117,6 +117,12 @@ Connect the regulated 6 V positive output to relay COM, relay NO to pump positiv
 
 The relay contacts must handle the DC motor's running and startup/stall current. Inductive loads may create voltage transients; use suitable suppression where required by the pump/relay manufacturer. Keep high-current paths away from sensor and RF wiring. A brownout during radio activity may indicate an inadequate USB cable/port, unstable 3.3 V rail, wiring fault, or current limitation. The RA-02's peak current demand makes supply integrity important.
 
+V. Software Design
+
+A. Development Environment
+
+The implementation uses Arduino IDE with the ESP32 board package, Sandeep Mistry LoRa library, and Blynk library for ESP32. The gateway sketch uses WiFi.h, BlynkSimpleEsp32.h, SPI.h and LoRa.h. Configure template ID, template name, device Auth Token, Wi-Fi SSID and password. Keep tokens and passwords private and out of public repositories.
+
 
 
 
