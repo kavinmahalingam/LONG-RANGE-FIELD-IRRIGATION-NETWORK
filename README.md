@@ -39,6 +39,60 @@ Capacitive soil-moisture sensors infer moisture from changes in electrical prope
 
 ESP32 provides Wi-Fi, GPIO, ADC, SPI and other interfaces suitable for a sensor gateway. Blynk supports dashboard monitoring through virtual datastreams. Cloud monitoring depends on Wi-Fi and internet availability; essential local control should not depend exclusively on an active cloud connection.
 
+III. System Requirements and Architecture
+
+A. Functional Requirements
+
+ID
+
+Requirement
+
+Design response
+
+FR-1
+
+Sample soil moisture
+
+Field ESP32 reads GPIO34 ADC input.
+
+FR-2
+
+Transmit field data
+
+SX1278 point-to-point LoRa at 433 MHz, subject to local rules.
+
+FR-3
+
+Validate data
+
+Gateway accepts numeric values in the 0–100 range.
+
+FR-4
+
+Automatic pump control
+
+Pump ON below lower threshold; OFF at/above upper threshold.
+
+FR-5
+
+Manual override
+
+Blynk V1 controls pump only in Manual mode.
+
+FR-6
+
+Display telemetry
+
+V0 moisture, V1 manual command, V2 mode, V3 status, V4 RSSI.
+
+FR-7
+
+Safe startup
+
+Initialize relay to OFF before normal operation.
+
+
+
 
 
 
