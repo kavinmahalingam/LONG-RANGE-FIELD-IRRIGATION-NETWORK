@@ -105,6 +105,12 @@ C. Operating Sequence
 
 • A production version must enter a defined safe state after a stale-packet timeout. This behavior must be implemented and tested.
 
+Field Node and Sensor
+
+The sensor analog output connects to GPIO34, an input-only ADC-capable pin on the classic ESP32. Sensor and field-node grounds must be common. Power the sensor according to its own specification and ensure its analog output never exceeds ESP32 ADC input limits. With 12-bit ADC resolution, raw readings nominally range from 0 to 4095. ADC counts are not a precise voltage measurement without suitable attenuation configuration and calibration.
+
+
+
 
 
 
