@@ -91,6 +91,20 @@ Safe startup
 
 Initialize relay to OFF before normal operation.
 
+C. Operating Sequence
+
+• Both ESP32 boards initialize SPI and matching LoRa parameters.
+
+• The field node samples the sensor and sends a value approximately every three seconds.
+
+• The gateway checks packet characters and range before applying control.
+
+• In Auto mode, low moisture requests pump ON and high moisture requests pump OFF; the state is retained between thresholds.
+
+• Blynk displays measurements and permits manual control when Manual mode is selected.
+
+• A production version must enter a defined safe state after a stale-packet timeout. This behavior must be implemented and tested.
+
 
 
 
