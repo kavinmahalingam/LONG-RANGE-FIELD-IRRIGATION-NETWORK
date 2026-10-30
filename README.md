@@ -109,6 +109,14 @@ Field Node and Sensor
 
 The sensor analog output connects to GPIO34, an input-only ADC-capable pin on the classic ESP32. Sensor and field-node grounds must be common. Power the sensor according to its own specification and ensure its analog output never exceeds ESP32 ADC input limits. With 12-bit ADC resolution, raw readings nominally range from 0 to 4095. ADC counts are not a precise voltage measurement without suitable attenuation configuration and calibration.
 
+Relay and Pump Power
+
+The gateway uses GPIO25 for relay input. The example code assumes an active-LOW relay: LOW energizes the relay and HIGH de-energizes it. Confirm this with the actual relay module before connecting the pump; some boards are active-HIGH.
+
+Connect the regulated 6 V positive output to relay COM, relay NO to pump positive, and pump negative to the supply negative. With the relay de-energized, COM–NO should be open. Adjust the LM2596 output and measure exactly 6.0 V before connecting the pump. A 12 V adapter can feed the converter only if within its input rating. Never connect pump current to an ESP32 GPIO or power the pump from the ESP32 3.3 V pin.
+
+The relay contacts must handle the DC motor's running and startup/stall current. Inductive loads may create voltage transients; use suitable suppression where required by the pump/relay manufacturer. Keep high-current paths away from sensor and RF wiring. A brownout during radio activity may indicate an inadequate USB cable/port, unstable 3.3 V rail, wiring fault, or current limitation. The RA-02's peak current demand makes supply integrity important.
+
 
 
 
